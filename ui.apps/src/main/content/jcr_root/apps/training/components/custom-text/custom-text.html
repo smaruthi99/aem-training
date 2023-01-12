@@ -22,6 +22,6 @@
      id="${component.id}"
      class="cmp-text">
     <h1  class="cmp-text__paragraph"
-       data-sly-unwrap="${textModel.isRichText}">${text @ context = textModel.isRichText ? 'html' : 'text'} -- hello</h1>
+       data-sly-unwrap="${textModel.isRichText}">${text @ context = textModel.isRichText ? 'html' : 'text component'} -- hello</h1>
 </div>
 <sly data-sly-call="${templates.placeholder @ isEmpty = !text, classAppend='cmp-text'}"></sly>

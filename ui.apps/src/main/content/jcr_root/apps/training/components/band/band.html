@@ -1,0 +1,18 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+  <sly data-sly-call="${clientlib.all @ categories='band-client-libraries'}"/>
+</sly>
+
+<div id="${properties.id}">
+  <div class="row">
+    <div class="column" style="background-color:#aaa;">
+      <div class="container">
+        <h2 daya-sly-test="${properties.header}">${properties.header}</h2>
+        <h3 daya-sly-test="${properties.subHeader}">${properties.subHeader}</h3>
+        <span data-sly-test="${properties.description}">${properties.description @context='html'}</span>
+      </div>
+    </div>
+    <div data-sly-test="${properties.fileReference}" class="column" style="background-color:#bbb;">
+      <img class="hero-image" src="${properties.fileReference}" alt="Hero Image">
+    </div>
+  </div>
+</div>
